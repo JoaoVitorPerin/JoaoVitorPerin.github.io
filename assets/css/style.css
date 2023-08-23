@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titillium+Web:wght@600&display=swap');
+
 body {
     overflow: hidden;
 }
+
+.modal p, span{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
+}
+
+.modal table{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.7rem;
+}
+
 
 .personagem{
     width: 100%;
@@ -17,4 +30,26 @@ body {
     background-image: url("/assets/img/fundoCidadePokemon.png");
     background-size: cover;
     background-position: center;
+}
+
+.cartaoTreinador{
+    border-radius: 1rem;
+    border: 3px solid black;
+    background-image: url("/assets/img/fundoPokebola.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left bottom;
+}
+
+.badges{
+    border-radius: 0.8rem 0.8rem 0rem 0rem ;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.badges img{
+    width: 35px;
+    padding: 2px;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(255, 0, 0, 0.2);
 }
