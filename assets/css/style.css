@@ -9,11 +9,26 @@ body {
     font-size: 0.8rem;
 }
 
+#cardMover {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 25rem;
+    height: 14rem;
+    z-index: 2;
+    border: 3px solid #3F3D3D;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
+}
+
+.card-body{
+    border: 4px solid #605166;
+}
+
 .modal table{
     font-family: 'Press Start 2P', sans-serif;
     font-size: 0.7rem;
 }
-
 
 .personagem{
     width: 100%;
@@ -30,6 +45,7 @@ body {
     background-image: url("/assets/img/fundoCidadePokemon.png");
     background-size: cover;
     background-position: center;
+    z-index: 1;
 }
 
 .cartaoTreinador{
