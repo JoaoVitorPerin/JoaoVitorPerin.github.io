@@ -2,46 +2,39 @@ const personagem = document.getElementById('personagem');
 const fundoTela = document.getElementById('fundoTela');
 let heightFundo = fundoTela.clientHeight;
 let widthFundo = fundoTela.clientWidth;
-let halfHeightFraction = Math.abs(heightFundo / 2.5);
-let halfWidthFraction = Math.abs(widthFundo / 2.5);
+let halfHeightFraction = heightFundo / 2.5;
+let halfWidthFraction = widthFundo / 2.5;
 
-let currentPosition = { x: 0, y: 0 };
+let currentPosition = { x: 420, y: -200 };
+personagem.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
 
 document.addEventListener('keydown', (event) => {
     const key = event.key;
-    const step = 10; // Ajuste este valor para controlar a velocidade de movimento
+    const step = 10;
 
     switch (key) {
         case 'ArrowLeft':
-            if(Math.abs(currentPosition.x) >= halfWidthFraction){
-                break;
+            if (currentPosition.x - step >= -halfWidthFraction) {
+                currentPosition.x -= step;
             }
-            currentPosition.x -= step;
             break;
         case 'ArrowRight':
-            if(Math.abs(currentPosition.x) >= halfWidthFraction){
-                break;
+            if (currentPosition.x + step <= halfWidthFraction) {
+                currentPosition.x += step;
             }
-            currentPosition.x += step;
             break;
         case 'ArrowUp':
-            if(Math.abs(currentPosition.y) > halfHeightFraction){
-                break;
+            if (currentPosition.y - step >= -halfHeightFraction) {
+                currentPosition.y -= step;
             }
-            currentPosition.y -= step;
             break;
         case 'ArrowDown':
-            if(Math.abs(currentPosition.y) > halfHeightFraction){
-                break;
+            if (currentPosition.y + step <= halfHeightFraction) {
+                currentPosition.y += step;
             }
-            currentPosition.y += step;
             break;
     }
 
-    // Restringir o movimento do personagem
-    if (Math.abs(currentPosition.y) > halfHeightFraction || Math.abs(currentPosition.x) > halfWidthFraction) {
-        return;
-    } else {
-        personagem.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
-    }
+    personagem.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
 });
+
