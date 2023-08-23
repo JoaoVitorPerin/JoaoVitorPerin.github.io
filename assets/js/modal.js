@@ -1,3 +1,7 @@
 $(document).ready(function (){
-    $('#exampleModal').modal('show')
+    $('#modalExperiencia').modal('show')
 })
+
+function abrirModalExperiencia(){
+    $('#modalExperiencia').modal('show')
+}

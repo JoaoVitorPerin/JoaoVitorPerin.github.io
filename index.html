@@ -6,9 +6,11 @@
     <title>Portfólio - João Vitor Perin</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="shortcut icon" type="imagex/png" href="/assets/img/favicon.ico">
 </head>
 <body>
     <div id="fundoTela" class="d-flex align-items-center justify-content-center py-3 fundoTela custom-cursor">
+        <div class="portaExperiencia"></div>
         <div id="personagem" class="personagem"></div>
     </div>
     
@@ -20,14 +22,14 @@
             </div>
             <div class="row d-flex align-items-center justify-content-center">
                 <img src="/assets/img/porta.png" class="col-3">
-                <p class="col-9">Clique <span class="text-danger">espaço</span> nas portas para investigar o local!(em desenvolvimento)</p>
+                <p class="col-9">Clique <span class="text-danger">enter</span> nas portas para investigar o local!(em desenvolvimento)</p>
             </div>
         </div>
     </div>
     
 
     <!-- Modal de apresentação do portfólio -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalApresentacao" tabindex="-1" aria-labelledby="modalApresentacao" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -75,6 +77,125 @@
                         </div>
                     </div>
                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de experiências profissionais -->
+    <div class="modal fade" id="modalExperiencia" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Experiências profissionais</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 experiencia">
+                        <div class="row d-flex align-items-center">
+                            <img class="col-2" src="/assets/img/inteliger.jpg">
+                            <div class="col-10">
+                                <ul>
+                                    <li>
+                                        <p><span class="text-danger">Cargo: </span>Desenvolvedor front-end junior II</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Empresa: </span>Inteliger</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Período: </span>abr de 2023 - o momento</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Modo: </span>Presencial</p>
+                                        <p class="text-danger">Atividades:</p>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <p>Desenvolvimento de interfaces de usuário responsivas e dinâmicas para aplicações web usando HTML, CSS, JavaScript, Bootstrap e jQuery;</p>
+                                            </li>
+                                            <li>
+                                                <p>Colaboração com a equipe de desenvolvimento para integrar o front-end com o back-end Django;</p>
+                                            </li>
+                                            <li>
+                                                <p>Utilização do framework Angular para criar componentes reutilizáveis e facilitar o desenvolvimento de aplicações complexas;</p>
+                                            </li>
+                                            <li>
+                                                <p>Participação em discussões de design e revisões de código para melhorar a qualidade do código e a eficiência do desenvolvimento.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex align-items-center">
+                            <img class="col-2" src="/assets/img/compass.jpg">
+                            <div class="col-10">
+                                <ul>
+                                    <li>
+                                        <p><span class="text-danger">Cargo: </span>Programa de Bolsas - DevOps</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Empresa: </span>Compass.uol</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Período: </span>dez de 2021 - fev de 2022</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Modo: </span>Remoto</p>
+                                        <p class="text-danger">Atividades:</p>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <p>Treinamento para Certificação LPI Linux Essentials;</p>
+                                            </li>
+                                            <li>
+                                                <p>Criação e manutenção de máquinas virtuais;</p>
+                                            </li>
+                                            <li>
+                                                <p>Criação e manutenção de containers docker.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex align-items-center">
+                            <img class="col-2" src="/assets/img/stalker.jpg">
+                            <div class="col-10">
+                                <ul>
+                                    <li>
+                                        <p><span class="text-danger">Cargo: </span>Estagiário de TI</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Empresa: </span>Stalker Engenharia</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Período: </span>jul de 2021 - dez de 2021</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="text-danger">Modo: </span>Presencial</p>
+                                        <p class="text-danger">Atividades:</p>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <p>Auxílio na instalação e manutenção de equipamentos de informática;</p>
+                                            </li>
+                                            <li>
+                                                <p>Auxílio na administração de banco de dados.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

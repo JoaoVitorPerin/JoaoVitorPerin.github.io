@@ -4,25 +4,8 @@ body {
     overflow: hidden;
 }
 
-.modal p, span{
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.8rem;
-}
-
-#cardMover {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 25rem;
-    height: 14rem;
-    z-index: 2;
-    border: 3px solid #3F3D3D;
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.8rem;
-}
-
-.card-body{
-    border: 4px solid #605166;
+li {
+    list-style-type: none;
 }
 
 .modal table{
@@ -30,22 +13,9 @@ body {
     font-size: 0.7rem;
 }
 
-.personagem{
-    width: 100%;
-    height: 100vh;
-    background-image: url("/assets/img/characterFront.png");
-    background-size: 3%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.fundoTela {
-    width: 100%;
-    height: 100vh;
-    background-image: url("/assets/img/fundoCidadePokemon.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+.modal p, span{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
 }
 
 .cartaoTreinador{
@@ -68,4 +38,52 @@ body {
     padding: 2px;
     border-radius: 0.3rem;
     border: 2px solid rgba(255, 0, 0, 0.2);
+}
+
+.personagem{
+    width: 3%;
+    height: 10%;
+    background-image: url("/assets/img/characterFront.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fundoTela {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/img/fundoCidadePokemon.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+#cardMover {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 25rem;
+    height: 14rem;
+    z-index: 2;
+    border: 3px solid #3F3D3D;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
+}
+
+.card-body{
+    border: 4px solid #605166;
+}
+
+.portaExperiencia{
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    top: 15%;
+}
+
+.experiencia img{
+    height: 6rem;
+    border: 2px solid rgba(255, 0, 0, 1);
+    padding: 0px!important;
+    border-radius: 1rem;
 }
