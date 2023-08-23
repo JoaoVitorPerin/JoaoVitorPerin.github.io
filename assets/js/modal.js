@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $('#modalExperiencia').modal('show')
+    $('#modalApresentacao').modal('show')
 })
 
 function abrirModalExperiencia(){
