@@ -12,7 +12,7 @@ personagem.style.transform = `translate(${currentPosition.x}px, ${currentPositio
 
 document.addEventListener('keydown', (event) => {
     const key = event.key;
-    const step = 10;
+    const step = 5;
 
     const personagemRect = personagem.getBoundingClientRect(); // Get the position and dimensions of the character
     const portaExperienciaRect = portaExperiencia.getBoundingClientRect(); // Get the position and dimensions of the experience door
@@ -28,25 +28,25 @@ document.addEventListener('keydown', (event) => {
         case 'ArrowLeft':
             if (currentPosition.x - step >= -halfWidthFraction) {
                 currentPosition.x -= step;
-                personagem.style.backgroundImage = 'url("/assets/img/characterLeft.png")';
+                personagem.style.backgroundImage = 'url("/assets/img/characterLeft.gif")';
             }
             break;
         case 'ArrowRight':
             if (currentPosition.x + step <= halfWidthFraction) {
                 currentPosition.x += step;
-                personagem.style.backgroundImage = 'url("/assets/img/characterRight.png")';
+                personagem.style.backgroundImage = 'url("/assets/img/characterRight.gif")';
             }
             break;
         case 'ArrowUp':
             if (currentPosition.y - step >= -halfHeightFraction) {
                 currentPosition.y -= step;
-                personagem.style.backgroundImage = 'url("/assets/img/characterBack.png")';
+                personagem.style.backgroundImage = 'url("/assets/img/characterUp.gif")';
             }
             break;
         case 'ArrowDown':
             if (currentPosition.y + step <= halfHeightFraction) {
                 currentPosition.y += step;
-                personagem.style.backgroundImage = 'url("/assets/img/characterFront.png")';
+                personagem.style.backgroundImage = 'url("/assets/img/characterDown.gif")';
             }
             break;
         case 'Enter':
@@ -59,3 +59,6 @@ document.addEventListener('keydown', (event) => {
     personagem.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
 });
 
+document.addEventListener('keyup', () => {
+    personagem.style.backgroundImage = 'url("/assets/img/character.png")';
+});

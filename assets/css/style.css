@@ -42,8 +42,8 @@ li {
 
 .personagem{
     width: 3%;
-    height: 10%;
-    background-image: url("/assets/img/characterFront.png");
+    height: 8%;
+    background-image: url("/assets/img/character.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,9 +76,9 @@ li {
 
 .portaExperiencia{
     width: 5%;
-    height: 10%;
+    height: 5%;
     position: absolute;
-    top: 15%;
+    top: 17%;
 }
 
 .experiencia img{
