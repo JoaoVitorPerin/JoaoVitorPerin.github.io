@@ -13,6 +13,7 @@
     <div id="fundoTela" class="d-flex align-items-center justify-content-center py-3 fundoTela custom-cursor">
         <div class="portaExperiencia" id="portaExperienciaId"></div>
         <div class="portaCentroPokemon" id="portaCentroPokemonId"></div>
+        <div class="portaCertificacao" id="portaCertificacaoId"></div>
         <div id="personagem" class="personagem"></div>
     </div>
     
@@ -85,7 +86,7 @@
     </div>
 
     <!-- Modal de experiências profissionais -->
-    <div class="modal fade" id="portaExperiencia" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
+    <div class="modal fade" id="portaExperiencia" tabindex="-1" aria-labelledby="portaExperiencia" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -94,7 +95,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body" style="overflow: auto; height: 25rem;">
+                <div class="modal-body" style="overflow: auto; height: 35rem;">
                     <div class="col-12 experiencia">
                         <div class="row d-flex align-items-center">
                             <img class="col-2" src="/assets/img/inteliger.jpg">
@@ -204,7 +205,7 @@
     </div>
 
     <!-- Modal do centro pokemon - Pokédex -->
-    <div class="modal fade" id="portaCentroPokemon" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
+    <div class="modal fade" id="portaCentroPokemon" tabindex="-1" aria-labelledby="portaCentroPokemon" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -232,6 +233,51 @@
                         </div>
 
                         <img src="/assets/img/pokedex.png" alt="Pokedex" class="pokedex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de certificações -->
+    <div class="modal fade" id="portaCertificacao" tabindex="-1" aria-labelledby="portaCertificacao" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Certificações</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body certificacao">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-4">
+                            <p class="col-12"><img src="/assets/img/alura.jpg" class="mr-3">Alura</p>
+                            <p class="col-12 text-danger">Certificação:</p>
+                            <p class="col-12 text-center">Azure: Deploy de uma webapp na nuvem</p>
+                            <p class="col-12"><span class="text-danger">Emição:</span>Dezembro de 2021</p>
+                            <a href="https://cursos.alura.com.br/certificate/7be21c3a-d4c3-443f-9bea-73d6d4bdea2f" target="_blank">
+                                <button  class="btn-danger btn col-12 mt-5">Acessar certificado</button>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <p class="col-12"><img src="/assets/img/alura.jpg" class="mr-3">Alura</p>
+                            <p class="col-12 text-danger">Certificação:</p>
+                            <p class="col-12 text-center">Docker: Criando containers sem dor de cabeça</p>
+                            <p class="col-12"><span class="text-danger">Emição:</span>Janeiro de 2022</p>
+                            <a href="https://cursos.alura.com.br/certificate/09d43b0e-69f7-4452-8eab-176df4bd50a1" target="_blank">
+                                <button class="btn-danger btn col-12 mt-5">Acessar certificado</button>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <p class="col-12"><img src="/assets/img/alura.jpg" class="mr-3">Alura</p>
+                            <p class="col-12 text-danger">Certificação:</p>
+                            <p class="col-12 text-center">Formação Certificação LPI Linux Essentials</p>
+                            <p class="col-12"><span class="text-danger">Emição:</span>Janeiro de 2022</p>
+                            <a href="https://cursos.alura.com.br/degree/certificate/d29d248b-4b6b-4a70-bff6-fabd25aca9bc" target="_blank">
+                                <button class="btn-danger btn col-12 mt-5">Acessar certificado</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

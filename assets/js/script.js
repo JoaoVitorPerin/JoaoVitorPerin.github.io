@@ -2,6 +2,7 @@ const personagem = document.getElementById('personagem');
 const fundoTela = document.getElementById('fundoTela');
 const portaExperiencia = document.getElementById('portaExperienciaId');
 const portaCentroPokemon = document.getElementById('portaCentroPokemonId');
+const portaCertificacao = document.getElementById('portaCertificacaoId');
 
 let heightFundo = fundoTela.clientHeight;
 let widthFundo = fundoTela.clientWidth;
@@ -18,9 +19,10 @@ document.addEventListener('keydown', (event) => {
     const personagemRect = personagem.getBoundingClientRect();
     const portaExperienciaRect = portaExperiencia.getBoundingClientRect();
     const portaCentroPokemonRect = portaCentroPokemon.getBoundingClientRect();
+    const portaCertificacaoRect = portaCertificacao.getBoundingClientRect();
 
-    let arrayRect = [portaExperienciaRect, portaCentroPokemonRect];
-    let arrayId = ['portaExperiencia', 'portaCentroPokemon'];
+    let arrayRect = [portaExperienciaRect, portaCentroPokemonRect, portaCertificacaoRect];
+    let arrayId = ['portaExperiencia', 'portaCentroPokemon', 'portaCertificacao'];
 
     
     function isOverDoor(portaRect){

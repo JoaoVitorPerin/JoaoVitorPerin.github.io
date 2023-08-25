@@ -96,3 +96,22 @@ li {
     top: 15%;
     right: 17%;
 }
+
+.portaCertificacao{
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    bottom: 15%;
+    right: 35%;
+}
+
+.certificacao img{
+    height: 6rem;
+    padding: 0px!important;
+    border-radius: 1rem;
+}
+
+.btn-danger{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.9rem!important;
+}
