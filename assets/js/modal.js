@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $('#portaCertificacao').modal('show')
+    $('#modalApresentacao').modal('show')
 })
 
 function abrirModalPorta(id){
