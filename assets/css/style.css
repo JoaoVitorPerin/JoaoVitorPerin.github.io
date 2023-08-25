@@ -41,8 +41,8 @@ li {
 }
 
 .personagem{
-    width: 3%;
-    height: 8%;
+    width: 40px;
+    height: 80px;
     background-image: url("/assets/img/character.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -75,10 +75,11 @@ li {
 }
 
 .portaExperiencia{
-    width: 5%;
+    width: 4%;
     height: 5%;
     position: absolute;
     top: 17%;
+    left: 49%;
 }
 
 .experiencia img{
@@ -86,4 +87,12 @@ li {
     border: 2px solid rgba(255, 0, 0, 1);
     padding: 0px!important;
     border-radius: 1rem;
+}
+
+.portaCentroPokemon{
+    width: 5%;
+    height: 8%;
+    position: absolute;
+    top: 15%;
+    right: 17%;
 }

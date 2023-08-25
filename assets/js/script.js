@@ -1,6 +1,7 @@
 const personagem = document.getElementById('personagem');
 const fundoTela = document.getElementById('fundoTela');
-const portaExperiencia = document.querySelector('.portaExperiencia');
+const portaExperiencia = document.getElementById('portaExperienciaId');
+const portaCentroPokemon = document.getElementById('portaCentroPokemonId');
 
 let heightFundo = fundoTela.clientHeight;
 let widthFundo = fundoTela.clientWidth;
@@ -12,17 +13,26 @@ personagem.style.transform = `translate(${currentPosition.x}px, ${currentPositio
 
 document.addEventListener('keydown', (event) => {
     const key = event.key;
-    const step = 5;
+    const step = 7;
 
-    const personagemRect = personagem.getBoundingClientRect(); // Get the position and dimensions of the character
-    const portaExperienciaRect = portaExperiencia.getBoundingClientRect(); // Get the position and dimensions of the experience door
+    const personagemRect = personagem.getBoundingClientRect();
+    const portaExperienciaRect = portaExperiencia.getBoundingClientRect();
+    const portaCentroPokemonRect = portaCentroPokemon.getBoundingClientRect();
 
-    const isOverlap = !(
-        personagemRect.right < portaExperienciaRect.left ||
-        personagemRect.left > portaExperienciaRect.right ||
-        personagemRect.bottom < portaExperienciaRect.top ||
-        personagemRect.top > portaExperienciaRect.bottom
-    );
+    let arrayRect = [portaExperienciaRect, portaCentroPokemonRect];
+    let arrayId = ['portaExperiencia', 'portaCentroPokemon'];
+
+    
+    function isOverDoor(portaRect){
+        const isOverlapping = !(
+            personagemRect.right < portaRect.left ||
+            personagemRect.left > portaRect.right ||
+            personagemRect.bottom < portaRect.top ||
+            personagemRect.top > portaRect.bottom
+        );
+
+        return isOverlapping
+    }
 
     switch (key) {
         case 'ArrowLeft':
@@ -50,8 +60,17 @@ document.addEventListener('keydown', (event) => {
             }
             break;
         case 'Enter':
-            if (isOverlap) {
-                abrirModalExperiencia()
+            let doorCheck;
+            console.log(arrayRect.length);
+            for (let i = 0; i < arrayRect.length; i++) {
+                console.log(personagemRect);
+                console.log(arrayRect[i]);
+                doorCheck = isOverDoor(arrayRect[i]);
+                console.log(doorCheck);
+                if(doorCheck){
+                    abrirModalPorta(arrayId[i]);
+                    break;
+                }
             }
             break;
     }

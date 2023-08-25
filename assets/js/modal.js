@@ -2,6 +2,7 @@ $(document).ready(function (){
     $('#modalApresentacao').modal('show')
 })
 
-function abrirModalExperiencia(){
-    $('#modalExperiencia').modal('show')
+function abrirModalPorta(id){
+    console.log(id);
+    $(`#${id}`).modal('show')
 }

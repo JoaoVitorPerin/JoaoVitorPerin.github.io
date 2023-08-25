@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="fundoTela" class="d-flex align-items-center justify-content-center py-3 fundoTela custom-cursor">
-        <div class="portaExperiencia"></div>
+        <div class="portaExperiencia" id="portaExperienciaId"></div>
+        <div class="portaCentroPokemon" id="portaCentroPokemonId"></div>
         <div id="personagem" class="personagem"></div>
     </div>
     
@@ -83,7 +84,7 @@
     </div>
 
     <!-- Modal de experiências profissionais -->
-    <div class="modal fade" id="modalExperiencia" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
+    <div class="modal fade" id="portaExperiencia" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -196,6 +197,23 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do centro pokemon -->
+    <div class="modal fade" id="portaCentroPokemon" tabindex="-1" aria-labelledby="modalExperiencia" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Pokédex</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="overflow: auto; height: 25rem;">
+                    <p></p>
                 </div>
             </div>
         </div>
