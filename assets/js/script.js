@@ -78,6 +78,22 @@ document.addEventListener('keydown', (event) => {
     personagem.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
 });
 
-document.addEventListener('keyup', () => {
-    personagem.style.backgroundImage = 'url("/assets/img/character.png")';
+document.addEventListener('keyup', (event) => {
+    const key = event.key;
+    
+    switch (key) {
+        case 'ArrowLeft':
+            personagem.style.backgroundImage = 'url("/assets/img/character3.png")';
+            break;
+        case 'ArrowRight':
+            personagem.style.backgroundImage = 'url("/assets/img/character4.png")';
+            break;
+        case 'ArrowUp':
+            personagem.style.backgroundImage = 'url("/assets/img/character2.png")';
+            break;
+        case 'ArrowDown':
+            personagem.style.backgroundImage = 'url("/assets/img/character.png")';
+            break;
+    }
 });
+
