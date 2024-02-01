@@ -16,6 +16,48 @@
     background-position: center;
 }
 
+@media (max-width: 500px){
+    .fundoTela {
+        width: 100%;
+        height: 260px;
+        background-image: url(/assets/img/fundoCidadePokemon.png);
+        background-size: cover; 
+        z-index: 1;
+    }
+
+    .personagem{
+        width: 20px;
+        height: 40px;
+        background-image: url("/assets/img/character.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .botoesMobile {
+        background-color: blue;
+        height: 100vh;
+    }
+
+    .bordaCabecalho{
+        height: 80px;
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+        background-color: black;
+    }
+
+    .botaoStart{
+        width: 40px;
+        background-color: black;
+        height: 15px;
+        border-radius: 10px;
+    }
+
+    #logoGameBoy{
+        width: 80%;
+    }
+}
+
 .direcionalContainer{
     position: absolute;
     bottom: 10px;
