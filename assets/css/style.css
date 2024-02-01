@@ -1,43 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titillium+Web:wght@600&display=swap');
-
-body {
-    overflow: hidden;
-}
-
-li {
-    list-style-type: none;
-}
-
-.modal table{
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.7rem;
-}
-
-.modal p, span{
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.8rem;
-}
-
-.cartaoTreinador{
-    border-radius: 1rem;
-    border: 3px solid black;
-    background-image: url("/assets/img/fundoPokebola.png");
-    background-size: 20%;
-    background-repeat: no-repeat;
+.fundoTela{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/img/fundoCidadePokemon.png");
+    background-size: cover;
     background-position: center;
-    background-position: left bottom;
-}
-
-.badges{
-    border-radius: 0.8rem 0.8rem 0rem 0rem ;
-    background-color: rgba(255, 0, 0, 0.5);
-}
-
-.badges img{
-    width: 35px;
-    padding: 2px;
-    border-radius: 0.3rem;
-    border: 2px solid rgba(255, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .personagem{
@@ -49,69 +16,24 @@ li {
     background-position: center;
 }
 
-.fundoTela {
-    width: 100%;
-    height: 100vh;
-    background-image: url("/assets/img/fundoCidadePokemon.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
-#cardMover {
+.direcionalContainer{
     position: absolute;
     bottom: 10px;
-    left: 10px;
-    width: 25rem;
-    height: 14rem;
-    z-index: 2;
-    border: 3px solid #3F3D3D;
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.8rem;
+    left: 20px;
+    z-index: 999; /* Garante que os botões fiquem sobrepostos aos outros elementos */
 }
 
-.card-body{
-    border: 4px solid #605166;
+.direcionalContainer img{
+    width: 60%;
 }
 
-.portaExperiencia{
-    width: 4%;
-    height: 5%;
+.botoesContainer {
     position: absolute;
-    top: 17%;
-    left: 49%;
+    bottom: 10px;
+    right: 20px;
+    z-index: 999; /* Garante que os botões fiquem sobrepostos aos outros elementos */
 }
 
-.experiencia img{
-    height: 6rem;
-    border: 2px solid rgba(255, 0, 0, 1);
-    padding: 0px!important;
-    border-radius: 1rem;
-}
-
-.portaCentroPokemon{
-    width: 5%;
-    height: 8%;
-    position: absolute;
-    top: 15%;
-    right: 17%;
-}
-
-.portaCertificacao{
-    width: 4%;
-    height: 6%;
-    position: absolute;
-    bottom: 15%;
-    right: 35%;
-}
-
-.certificacao img{
-    height: 6rem;
-    padding: 0px!important;
-    border-radius: 1rem;
-}
-
-.btn-danger{
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 0.9rem!important;
+.botoesContainer img{
+    width: 60px;
 }
