@@ -45,9 +45,9 @@ function touchMoveHandler(event) {
     const deltaY = touchEndY - touchStartY;
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        deltaX > 0 ? moverPersonagem(10, 0, '/assets/img/characterRight.gif') : moverPersonagem(-10, 0, '/assets/img/characterLeft.gif');
+        deltaX > 0 ? moverPersonagem(5, 0, '/assets/img/characterRight.gif') : moverPersonagem(-5, 0, '/assets/img/characterLeft.gif');
     } else {
-        deltaY > 0 ? moverPersonagem(0, 10, '/assets/img/characterDown.gif') : moverPersonagem(0, -10, '/assets/img/characterUp.gif');
+        deltaY > 0 ? moverPersonagem(0, 5, '/assets/img/characterDown.gif') : moverPersonagem(0, -5, '/assets/img/characterUp.gif');
     }
 
     touchStartX = touchEndX;
