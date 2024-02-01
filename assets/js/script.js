@@ -18,13 +18,24 @@ $(document).on("keyup", function(event) {
     });
 });
 
+let touchStartX, touchStartY;
+
 $("#direcional").on("touchstart", function (event) {
+    event.preventDefault(); // Evita o comportamento padrão do scroll
     touchStartX = event.originalEvent.touches[0].pageX;
     touchStartY = event.originalEvent.touches[0].pageY;
+
+    $(document).on("touchmove", touchMoveHandler);
 });
 
-$("#direcional").on("touchmove", function (event) {
-    console.log('bbbb')
+$("#direcional").on("touchend", function () {
+    $(document).off("touchmove", touchMoveHandler);
+    personagem.css({
+        'background-image': `url("/assets/img/character.png")`
+    });
+});
+
+function touchMoveHandler(event) {
     event.preventDefault(); // Evita o comportamento padrão do scroll
 
     const touchEndX = event.originalEvent.touches[0].pageX;
@@ -34,17 +45,14 @@ $("#direcional").on("touchmove", function (event) {
     const deltaY = touchEndY - touchStartY;
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        deltaX > 0 ? moverPersonagem(2, 0, '/assets/img/characterRight.gif') : moverPersonagem(-2, 0, '/assets/img/characterLeft.gif');
+        deltaX > 0 ? moverPersonagem(5, 0, '/assets/img/characterRight.gif') : moverPersonagem(-5, 0, '/assets/img/characterLeft.gif');
     } else {
-        deltaY > 0 ? moverPersonagem(0, 2, '/assets/img/characterDown.gif') : moverPersonagem(0, -2, '/assets/img/characterUp.gif');
+        deltaY > 0 ? moverPersonagem(0, 5, '/assets/img/characterDown.gif') : moverPersonagem(0, -5, '/assets/img/characterUp.gif');
     }
-});
 
-$("#direcional").on("touchend", function () {
-    personagem.css({
-        'background-image': `url("/assets/img/character.png")`
-    });
-});
+    touchStartX = touchEndX;
+    touchStartY = touchEndY;
+}
 
 function validarTecla(tecla) {
     switch (tecla) {
