@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titillium+Web:wght@600&display=swap');
+
 .fundoTela{
     width: 100%;
     height: 100vh;
@@ -59,6 +61,7 @@
     }
 }
 
+
 .direcionalContainer{
     position: absolute;
     bottom: 10px;
@@ -79,4 +82,44 @@
 
 .botoesContainer img{
     width: 60px;
+}
+
+.modal table{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.7rem;
+}
+
+.modal p, span{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
+}
+
+.cartaoTreinador{
+    border-radius: 1rem;
+    border: 3px solid black;
+    background-image: url("/assets/img/fundoPokebola.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left bottom;
+}
+
+.badges{
+    border-radius: 0.8rem 0.8rem 0rem 0rem ;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.badges img{
+    width: 35px;
+    padding: 2px;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(255, 0, 0, 0.2);
+}
+
+.tituloDispositivo{
+    font-weight: 700;
+}
+
+.tutorialDesktop img{
+    height: 40px;
 }

@@ -5,6 +5,7 @@ const alturaTela = $("#fundoTela").height();
 
 $(document).ready(function () {
     posicaoInicialPersonagem()
+    $('#modalApresentacao').modal('show')
 });
 
 $(document).on("keydown", function(event) {
