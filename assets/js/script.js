@@ -1,7 +1,7 @@
 const personagem = $("#personagem");
 const fundoTela = $("#fundoTela");
-const larguraTela = $(window).width();
-const alturaTela = $(window).height();
+const larguraTela = $("#fundoTela").width();
+const alturaTela = $("#fundoTela").height();
 
 $(document).ready(function () {
     posicaoInicialPersonagem()
@@ -45,9 +45,9 @@ function touchMoveHandler(event) {
     const deltaY = touchEndY - touchStartY;
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        deltaX > 0 ? moverPersonagem(5, 0, '/assets/img/characterRight.gif') : moverPersonagem(-5, 0, '/assets/img/characterLeft.gif');
+        deltaX > 0 ? moverPersonagem(3, 0, '/assets/img/characterRight.gif') : moverPersonagem(-3, 0, '/assets/img/characterLeft.gif');
     } else {
-        deltaY > 0 ? moverPersonagem(0, 5, '/assets/img/characterDown.gif') : moverPersonagem(0, -5, '/assets/img/characterUp.gif');
+        deltaY > 0 ? moverPersonagem(0, 3, '/assets/img/characterDown.gif') : moverPersonagem(0, -3, '/assets/img/characterUp.gif');
     }
 
     touchStartX = touchEndX;
